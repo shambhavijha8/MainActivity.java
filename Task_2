@@ -1,0 +1,23 @@
+<ul>
+ <li>item 1</li>checkbox
+ <li>item 2</li>
+</ul>
+
+<a href="delete.php?ids=checkedids">Delete items</a>
+<input type="checkbox" name="item[]" value="1" />
+<input type="checkbox" name="item[]" value="2" />
+<input type="checkbox" name="item[]" value="3" />
+if(empty($_REQUEST['item'])) {
+    // No items checked
+}
+else {
+    foreach($_REQUEST['item'] as $id) {
+        // delete the item with the id $id
+    }
+}
+<form method="post" target="some/php/script.php">
+    <input type="checkbox" name="item[]" value="1" />
+    <input type="checkbox" name="item[]" value="2" />
+    <input type="checkbox" name="item[]" value="3" />
+    <input type="submit" name="delete" value="Delete checked items" />
+</form>
